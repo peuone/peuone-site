@@ -11,5 +11,23 @@
 .hero .headline{margin:1.5rem 0 2.4rem}
 .aside-statement{font:600 clamp(1.45rem,2.1vw,2.25rem)/1.1 var(--display);letter-spacing:-.05em;margin:0 0 4rem}
 .aside-statement span{color:var(--lime)}
+.drone-section{background:#07090b;border-bottom:1px solid var(--line)}
+.drone-heading{display:grid;grid-template-columns:.4fr 1fr .6fr;align-items:end;margin-bottom:3rem}
+.drone-heading .section-number{align-self:start}
+.drone-heading h2{font-size:clamp(2.5rem,5vw,5rem);line-height:1.02}
+.drone-heading h2 span{color:#69706f}
+.drone-heading>p{color:#8e9492;line-height:1.65;max-width:390px;margin:0}
+.drone-gallery{display:grid;grid-template-columns:1.6fr 1fr;grid-template-rows:repeat(2,minmax(240px,32vw));gap:1rem}
+.drone-photo{position:relative;margin:0;overflow:hidden;border-radius:1.25rem;border:1px solid var(--line);background:var(--panel)}
+.drone-photo-main{grid-row:1/-1}
+.drone-photo img{width:100%;height:100%;display:block;object-fit:cover;transition:transform .7s ease,filter .7s ease}
+.drone-photo:after{content:"";position:absolute;inset:35% 0 0;background:linear-gradient(transparent,rgba(4,6,7,.86));pointer-events:none}
+.drone-photo:hover img{transform:scale(1.035);filter:saturate(1.08)}
+.drone-photo figcaption{position:absolute;z-index:2;left:1.5rem;right:1.5rem;bottom:1.35rem;display:flex;align-items:end;justify-content:space-between;gap:1rem}
+.drone-photo figcaption span{font:600 clamp(1.25rem,2.4vw,2.3rem) var(--display);letter-spacing:-.045em}
+.drone-photo figcaption small{color:#d7d9d4;text-align:right}
+.drone-instagram{display:flex;justify-content:space-between;align-items:center;margin-top:1rem;border:1px solid var(--line);border-radius:99px;padding:1rem 1.35rem;color:#c5cac7;font-size:.86rem;transition:.25s}
+.drone-instagram:hover{border-color:rgba(201,255,94,.4);color:var(--lime);transform:translateY(-2px)}
 @media(max-width:900px){.hero-name{font-size:clamp(4.2rem,16vw,8rem)}}
-@media(max-width:600px){.hero-name{font-size:clamp(4rem,20vw,6rem);line-height:.8}.hero-statement{margin-top:2rem}}
+@media(max-width:900px){.drone-heading{grid-template-columns:1fr;gap:2rem}.drone-gallery{grid-template-columns:1fr 1fr;grid-template-rows:minmax(400px,70vw) minmax(240px,45vw)}.drone-photo-main{grid-column:1/-1;grid-row:auto}}
+@media(max-width:600px){.hero-name{font-size:clamp(4rem,20vw,6rem);line-height:.8}.hero-statement{margin-top:2rem}.drone-gallery{grid-template-columns:1fr;grid-template-rows:repeat(3,minmax(300px,95vw))}.drone-photo-main{grid-column:auto}.drone-photo figcaption{left:1rem;right:1rem;bottom:1rem;align-items:start;flex-direction:column}.drone-photo figcaption small{text-align:left}.drone-instagram{border-radius:1rem}}
